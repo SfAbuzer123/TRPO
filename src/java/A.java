@@ -1,13 +1,16 @@
 package java;
 
-public class A extends C{
-    private Object b;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void setB(B b) {
-        this.b = b;
-    }
+public class A {
+    protected List<Float> x;
 
-    public Object getB() {
-        return b;
+    public List<Float> solution(float a, float b) {
+        if(a==0)
+            throw new RuntimeException("No roots");
+        x = new ArrayList<>();
+        x.add(-b / a);
+        return x;
     }
 }
